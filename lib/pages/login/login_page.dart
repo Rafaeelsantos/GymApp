@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../cadastro/widgets/glass_container.dart';
 import '../cadastro/widgets/logo_header.dart';
+import '../home/home_page.dart';
 import 'widgets/login_form.dart';
 
 class LoginPage extends StatelessWidget {
@@ -12,16 +13,13 @@ class LoginPage extends StatelessWidget {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/banner.png',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/banner.png', fit: BoxFit.cover),
           ),
 
           Center(
             child: GlassContainer(
               width: 450,
-              height: 800,
+              height: 900,
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 28,

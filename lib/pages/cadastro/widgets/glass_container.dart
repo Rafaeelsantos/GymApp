@@ -33,7 +33,7 @@ class GlassContainer extends StatelessWidget {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
-            color: Colors.black.withOpacity(0.80),
+            color: const Color.fromARGB(255, 10, 10, 14).withOpacity(0.95),
             child: child,
           ),
         ),

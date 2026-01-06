@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../cadastro/widgets/custom_input.dart';
+import '../../home/home_page.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -25,16 +26,25 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void _login() {
-    if (_formKey.currentState!.validate()) {
-      print('Email: ${_email.text}');
-      print('Senha: ${_password.text}');
+    _formKey.currentState!.validate(); // só mostra erros
 
-      // Aqui você pode:
-      // - chamar API
-      // - autenticar Firebase
-      // - navegar para Home
-    }
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomePage()),
+    );
   }
+
+  //void _login() {
+  //  if (_formKey.currentState!.validate()) {
+  //    print('Email: ${_email.text}');
+  //    print('Senha: ${_password.text}');
+
+  // Aqui você pode:
+  // - chamar API
+  // - autenticar Firebase
+  // - navegar para Home
+  //  }
+  //}
 
   @override
   Widget build(BuildContext context) {

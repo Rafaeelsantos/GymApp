@@ -136,7 +136,7 @@ class _CadastroFormState extends State<CadastroForm> {
             },
             borderRadius: BorderRadius.circular(4),
             child: Text(
-              'Já tem login?',
+              'Fazer Login',
               style: GoogleFonts.orbitron(
                 color: const Color.fromARGB(255, 255, 111, 0),
                 fontSize: 12,

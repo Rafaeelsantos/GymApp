@@ -12,10 +12,7 @@ class CadastroPage extends StatelessWidget {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/banner.png',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/banner.png', fit: BoxFit.cover),
           ),
 
           Center(
@@ -23,17 +20,20 @@ class CadastroPage extends StatelessWidget {
               width: 450,
               height: 900,
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 28,
+                  vertical: 40,
+                ),
                 child: Column(
                   children: const [
                     LogoHeader(),
                     SizedBox(height: 20),
-                    CadastroForm(),   // <-- form modularizado
+                    CadastroForm(), // <-- form modularizado
                   ],
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
