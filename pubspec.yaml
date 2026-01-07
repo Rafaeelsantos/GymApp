@@ -25,6 +25,8 @@ environment:
 dependencies:
   google_fonts: ^6.3.3
 
+  fl_chart: ^0.66.0
+
   flutter:
     sdk: flutter
 
