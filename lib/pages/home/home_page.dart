@@ -85,18 +85,42 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: GNav(
-        tabs: const [
-          GButton(
-            icon: Icons.chat_bubble,
-            text: "home",
-            textColor: Colors.white,
+
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(255, 15, 15, 15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54,
+              blurRadius: 10,
+              offset: Offset(0, -2),
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          child: GNav(
+            selectedIndex: 0,
+            haptic: true,
+            rippleColor: Colors.deepOrange.withOpacity(0.2),
+            hoverColor: Colors.deepOrange.withOpacity(0.1),
+            gap: 8,
+            tabBorderRadius: 20,
+            duration: const Duration(milliseconds: 400),
+            color: Colors.grey.shade500,
+            activeColor: Colors.deepOrange,
+            tabBackgroundColor: Colors.deepOrange.withOpacity(0.15),
+            iconSize: 26,
+            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+            tabs: const [
+              GButton(icon: Icons.chat_bubble_outline, text: 'Chat'),
+              GButton(icon: Icons.fitness_center, text: 'Treino'),
+              GButton(icon: Icons.home, text: 'Início'),
+              GButton(icon: Icons.flatware_outlined, text: 'Dieta'),
+              GButton(icon: Icons.person_outline, text: 'Perfil'),
+            ],
           ),
-          GButton(icon: Icons.fitness_center),
-          GButton(icon: Icons.home),
-          GButton(icon: Icons.flatware),
-          GButton(icon: Icons.person),
-        ],
+        ),
       ),
     );
   }
